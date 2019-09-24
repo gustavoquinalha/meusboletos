@@ -1,11 +1,11 @@
 {
-  "name": "@nuxtjs/tailwindcss",
-  "version": "1.1.2",
-  "description": "TailwindCSS module for Nuxt.js",
+  "name": "meusboletos",
+  "version": "0.0.1",
+  "description": "Meus boletos",
   "license": "MIT",
   "contributors": [
     {
-      "name": "Sébastien Chopin <seb@chopin.io>"
+      "name": "Gustavo Quinalha <gusquinalha@gmail.com>"
     }
   ],
   "main": "lib/module.js",
@@ -17,7 +17,9 @@
     "dev": "nuxt example",
     "lint": "eslint --ext .js,.vue example lib test",
     "test": "yarn lint && jest",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "files": [
     "lib"
@@ -26,6 +28,7 @@
     "consola": "^2.10.1",
     "fs-extra": "^8.1.0",
     "nuxt-purgecss": "^0.2.1",
+    "push-dir": "^0.4.1",
     "tailwindcss": "^1.1.0"
   },
   "devDependencies": {
